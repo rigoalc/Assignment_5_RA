@@ -90,18 +90,24 @@
 
 
 
-#create main function
 
+
+#create main function
+def get_specials():
+    
+    
 
 #create variables and prompt the user for the input
-def get_specials():
+
     name = input("Please enter your name:")
     day = input("Please enter the day of the week (Mon, Tue, Wed, Thu, Fri):")
     meal = "meat"
+    #condition for day of week
     if day == "Mon":
         meal = "Spaghetti"
     if day == "Tue":
         meal = "Lasagna"
+        #nested for name less than 5 characters
         if len(name)<5:
             meal = "Impossible Burger"
     if day == "Wed":
@@ -112,9 +118,11 @@ def get_specials():
             meal = "Beyond Burger"
     if day == "Fri":
         meal = "Tacos"
+        #print the output 
     
     print ("The special for", day, "is", meal) 
 
+#call the function
 get_specials()
 
             
