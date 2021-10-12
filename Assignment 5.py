@@ -1,6 +1,6 @@
 #ASSIGNMENT 5
 
-# Rodrigo Alcover
+# Rodrigo 
 # 9/10/2021
 # CIS-216-12292 
 # Python Programming
@@ -91,34 +91,31 @@
 
 
 #create main function
-def get_specials(prompt):
-#user input as string value
-    value = input(prompt)
-    value = str(value)
-    #return the value input
-    return value 
+
+
 #create variables and prompt the user for the input
-name = get_specials("Please enter your name:")
-day = get_specials("Please enter the day of the week (Mon, Tue, Wed, Thu, Fri):")
-
-#Nested condition for the menu of the day given the selected day and length of the user name.
-if day == "Mon":
-    meal = "Spaghetti"
-    if day == "Tue" and name.length < 5:
-        meal = "Impossible Burger"
-    else: 
+def get_specials():
+    name = input("Please enter your name:")
+    day = input("Please enter the day of the week (Mon, Tue, Wed, Thu, Fri):")
+    meal = "meat"
+    if day == "Mon":
+        meal = "Spaghetti"
+    if day == "Tue":
         meal = "Lasagna"
-        if day == "Wed":
-            meal = "Minestrone soup"
-            if day == "Thu" and name.length < 5:
-                meal = "Pot pie"
-            else:
-                meal = "Beyond Burger"
-                if day == "Fri":
-                        meal = "Tacos"           
-#Print the result to the user.         
-print ("The special for", day, "is", meal)
+        if len(name)<5:
+            meal = "Impossible Burger"
+    if day == "Wed":
+        meal = "Minestrone soup"
+    if day == "Thu":
+        meal = "Pot pie"
+        if len(name)<5:
+            meal = "Beyond Burger"
+    if day == "Fri":
+        meal = "Tacos"
+    
+    print ("The special for", day, "is", meal) 
 
+get_specials()
 
             
 
